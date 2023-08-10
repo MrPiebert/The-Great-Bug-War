@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "The Great Bug War", "The Great Bug War\The Great Bug War.vbproj", "{A1DF036E-8FFE-4840-8BC9-F0EFF308B7C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1DF036E-8FFE-4840-8BC9-F0EFF308B7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1DF036E-8FFE-4840-8BC9-F0EFF308B7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1DF036E-8FFE-4840-8BC9-F0EFF308B7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1DF036E-8FFE-4840-8BC9-F0EFF308B7C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71B03828-4F3F-400F-8CA2-118C7F0F2383}
+	EndGlobalSection
+EndGlobal
