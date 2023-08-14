@@ -22,9 +22,33 @@ Partial Class Customise_Player
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.BackBtn = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+        '
+        'BackBtn
+        '
+        Me.BackBtn.AutoSize = True
+        Me.BackBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackBtn.Location = New System.Drawing.Point(34, 390)
+        Me.BackBtn.Name = "BackBtn"
+        Me.BackBtn.Size = New System.Drawing.Size(92, 27)
+        Me.BackBtn.TabIndex = 0
+        Me.BackBtn.Text = "Back"
+        '
+        'Customise_Player
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BackBtn)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "Customise_Player"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Customise_Player"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents BackBtn As Label
 End Class

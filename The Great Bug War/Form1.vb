@@ -6,4 +6,21 @@
     Private Sub ExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
         Me.Close()
     End Sub
+
+    Private Sub PlayBtn_Click(sender As Object, e As EventArgs) Handles PlayBtn.Click
+        Me.Hide()
+        Customise_Player.Show()
+    End Sub
+
+    Private Sub OptionsBtn_Click(sender As Object, e As EventArgs) Handles OptionsBtn.Click
+        Options.Show()
+    End Sub
+
+    Private Sub HighBtn_Click(sender As Object, e As EventArgs) Handles HighBtn.Click
+        HighScores.Show()
+    End Sub
+
+    Private Sub InstructionsBtn_Click(sender As Object, e As EventArgs) Handles InstructionsBtn.Click
+        Instructions.Show()
+    End Sub
 End Class

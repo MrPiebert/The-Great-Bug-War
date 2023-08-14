@@ -1,4 +1,4 @@
-﻿Public Class Customise_Player
+﻿Public Class Instructions
     Private Sub BackBtn_Click(sender As Object, e As EventArgs) Handles BackBtn.Click
         Me.Close()
         Form1.Show()
