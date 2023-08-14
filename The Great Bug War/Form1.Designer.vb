@@ -34,9 +34,12 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(349, 85)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Press Start 2P", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.IndianRed
+        Me.Label1.Location = New System.Drawing.Point(192, 58)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(122, 48)
+        Me.Label1.Size = New System.Drawing.Size(493, 114)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Insect Invasion:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The Great Bug War" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -44,9 +47,12 @@ Partial Class Form1
         'PlayBtn
         '
         Me.PlayBtn.AutoSize = True
-        Me.PlayBtn.Location = New System.Drawing.Point(378, 280)
+        Me.PlayBtn.BackColor = System.Drawing.Color.Transparent
+        Me.PlayBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlayBtn.ForeColor = System.Drawing.Color.White
+        Me.PlayBtn.Location = New System.Drawing.Point(398, 277)
         Me.PlayBtn.Name = "PlayBtn"
-        Me.PlayBtn.Size = New System.Drawing.Size(34, 16)
+        Me.PlayBtn.Size = New System.Drawing.Size(92, 27)
         Me.PlayBtn.TabIndex = 1
         Me.PlayBtn.Text = "Play"
         Me.PlayBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -54,9 +60,12 @@ Partial Class Form1
         'InstructionsBtn
         '
         Me.InstructionsBtn.AutoSize = True
-        Me.InstructionsBtn.Location = New System.Drawing.Point(364, 307)
+        Me.InstructionsBtn.BackColor = System.Drawing.Color.Transparent
+        Me.InstructionsBtn.Font = New System.Drawing.Font("Press Start 2P", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InstructionsBtn.ForeColor = System.Drawing.Color.White
+        Me.InstructionsBtn.Location = New System.Drawing.Point(331, 316)
         Me.InstructionsBtn.Name = "InstructionsBtn"
-        Me.InstructionsBtn.Size = New System.Drawing.Size(73, 16)
+        Me.InstructionsBtn.Size = New System.Drawing.Size(228, 25)
         Me.InstructionsBtn.TabIndex = 2
         Me.InstructionsBtn.Text = "Instructions"
         Me.InstructionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -64,9 +73,12 @@ Partial Class Form1
         'OptionsBtn
         '
         Me.OptionsBtn.AutoSize = True
-        Me.OptionsBtn.Location = New System.Drawing.Point(370, 337)
+        Me.OptionsBtn.BackColor = System.Drawing.Color.Transparent
+        Me.OptionsBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OptionsBtn.ForeColor = System.Drawing.Color.Transparent
+        Me.OptionsBtn.Location = New System.Drawing.Point(368, 353)
         Me.OptionsBtn.Name = "OptionsBtn"
-        Me.OptionsBtn.Size = New System.Drawing.Size(53, 16)
+        Me.OptionsBtn.Size = New System.Drawing.Size(152, 27)
         Me.OptionsBtn.TabIndex = 3
         Me.OptionsBtn.Text = "Options"
         Me.OptionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -74,9 +86,12 @@ Partial Class Form1
         'HighBtn
         '
         Me.HighBtn.AutoSize = True
-        Me.HighBtn.Location = New System.Drawing.Point(361, 367)
+        Me.HighBtn.BackColor = System.Drawing.Color.Transparent
+        Me.HighBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HighBtn.ForeColor = System.Drawing.Color.Snow
+        Me.HighBtn.Location = New System.Drawing.Point(331, 395)
         Me.HighBtn.Name = "HighBtn"
-        Me.HighBtn.Size = New System.Drawing.Size(81, 16)
+        Me.HighBtn.Size = New System.Drawing.Size(232, 27)
         Me.HighBtn.TabIndex = 3
         Me.HighBtn.Text = "High Scores"
         Me.HighBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -84,9 +99,12 @@ Partial Class Form1
         'CreditsBtn
         '
         Me.CreditsBtn.AutoSize = True
-        Me.CreditsBtn.Location = New System.Drawing.Point(374, 396)
+        Me.CreditsBtn.BackColor = System.Drawing.Color.Transparent
+        Me.CreditsBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CreditsBtn.ForeColor = System.Drawing.Color.Snow
+        Me.CreditsBtn.Location = New System.Drawing.Point(368, 435)
         Me.CreditsBtn.Name = "CreditsBtn"
-        Me.CreditsBtn.Size = New System.Drawing.Size(49, 16)
+        Me.CreditsBtn.Size = New System.Drawing.Size(152, 27)
         Me.CreditsBtn.TabIndex = 4
         Me.CreditsBtn.Text = "Credits"
         Me.CreditsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -94,9 +112,12 @@ Partial Class Form1
         'ExitBtn
         '
         Me.ExitBtn.AutoSize = True
-        Me.ExitBtn.Location = New System.Drawing.Point(383, 427)
+        Me.ExitBtn.BackColor = System.Drawing.Color.Transparent
+        Me.ExitBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitBtn.ForeColor = System.Drawing.Color.Snow
+        Me.ExitBtn.Location = New System.Drawing.Point(398, 474)
         Me.ExitBtn.Name = "ExitBtn"
-        Me.ExitBtn.Size = New System.Drawing.Size(28, 16)
+        Me.ExitBtn.Size = New System.Drawing.Size(92, 27)
         Me.ExitBtn.TabIndex = 5
         Me.ExitBtn.Text = "Exit"
         Me.ExitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -105,7 +126,8 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(802, 553)
+        Me.BackgroundImage = Global.The_Great_Bug_War.My.Resources.Resources.cropped_1920_1200_900628
+        Me.ClientSize = New System.Drawing.Size(879, 578)
         Me.Controls.Add(Me.ExitBtn)
         Me.Controls.Add(Me.CreditsBtn)
         Me.Controls.Add(Me.HighBtn)
@@ -113,6 +135,7 @@ Partial Class Form1
         Me.Controls.Add(Me.InstructionsBtn)
         Me.Controls.Add(Me.PlayBtn)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
