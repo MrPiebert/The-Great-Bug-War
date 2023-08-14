@@ -69,5 +69,14 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Terraria___Overworld_Day_8_Bit_Theme() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Terraria___Overworld_Day_8_Bit_Theme", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

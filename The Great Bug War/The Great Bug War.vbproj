@@ -164,5 +164,8 @@
   <ItemGroup>
     <None Include="Resources\cropped-1920-1200-900628.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terraria - Overworld Day 8-Bit Theme.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
