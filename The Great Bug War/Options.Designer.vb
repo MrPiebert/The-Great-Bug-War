@@ -25,6 +25,7 @@ Partial Class Options
         Me.OptionsLbl = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BackBtn = New System.Windows.Forms.Label()
+        Me.AudioLbl = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,6 +42,7 @@ Partial Class Options
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.AudioLbl)
         Me.Panel1.Controls.Add(Me.BackBtn)
         Me.Panel1.Controls.Add(Me.OptionsLbl)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
@@ -57,6 +59,16 @@ Partial Class Options
         Me.BackBtn.Size = New System.Drawing.Size(78, 23)
         Me.BackBtn.TabIndex = 1
         Me.BackBtn.Text = "Back"
+        '
+        'AudioLbl
+        '
+        Me.AudioLbl.AutoSize = True
+        Me.AudioLbl.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AudioLbl.Location = New System.Drawing.Point(108, 174)
+        Me.AudioLbl.Name = "AudioLbl"
+        Me.AudioLbl.Size = New System.Drawing.Size(92, 27)
+        Me.AudioLbl.TabIndex = 2
+        Me.AudioLbl.Text = "Mute"
         '
         'Options
         '
@@ -78,4 +90,5 @@ Partial Class Options
     Friend WithEvents OptionsLbl As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BackBtn As Label
+    Friend WithEvents AudioLbl As Label
 End Class
