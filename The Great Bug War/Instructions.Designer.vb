@@ -32,50 +32,55 @@ Partial Class Instructions
         'BackBtn
         '
         Me.BackBtn.AutoSize = True
-        Me.BackBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BackBtn.Location = New System.Drawing.Point(356, 409)
+        Me.BackBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackBtn.Location = New System.Drawing.Point(267, 332)
+        Me.BackBtn.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.BackBtn.Name = "BackBtn"
-        Me.BackBtn.Size = New System.Drawing.Size(92, 27)
+        Me.BackBtn.Size = New System.Drawing.Size(45, 20)
         Me.BackBtn.TabIndex = 0
         Me.BackBtn.Text = "Back"
         '
         'IntructionsLbl
         '
         Me.IntructionsLbl.AutoSize = True
-        Me.IntructionsLbl.Font = New System.Drawing.Font("Press Start 2P", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IntructionsLbl.Location = New System.Drawing.Point(219, 20)
+        Me.IntructionsLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IntructionsLbl.Location = New System.Drawing.Point(164, 16)
+        Me.IntructionsLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.IntructionsLbl.Name = "IntructionsLbl"
-        Me.IntructionsLbl.Size = New System.Drawing.Size(353, 38)
+        Me.IntructionsLbl.Size = New System.Drawing.Size(123, 26)
         Me.IntructionsLbl.TabIndex = 1
         Me.IntructionsLbl.Text = "Instructions"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 100)
+        Me.Label1.Location = New System.Drawing.Point(34, 81)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(355, 16)
+        Me.Label1.Size = New System.Drawing.Size(306, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Just press WASD to move and Z to shoot and X to skill smh"
+        Me.Label1.Text = "Just press arrow keys to move and Z to shoot and X to skill smh"
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(511, 100)
+        Me.PictureBox1.Location = New System.Drawing.Point(383, 81)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(233, 220)
+        Me.PictureBox1.Size = New System.Drawing.Size(175, 179)
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
         'Instructions
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 460)
+        Me.ClientSize = New System.Drawing.Size(600, 374)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.IntructionsLbl)
         Me.Controls.Add(Me.BackBtn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Instructions"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Instructions"
