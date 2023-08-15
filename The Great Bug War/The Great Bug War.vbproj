@@ -133,6 +133,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gameplay Screen.resx">
+      <DependentUpon>Gameplay Screen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HighScores.resx">
       <DependentUpon>HighScores.vb</DependentUpon>
     </EmbeddedResource>
