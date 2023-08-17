@@ -1,7 +1,13 @@
-﻿Public Class Form1
+﻿Imports WMPLib
+Imports System.IO
+
+Public Class Form1
+    Public player As New WindowsMediaPlayer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BackgroundImageLayout = ImageLayout.Stretch                      'sets background image size
-        My.Computer.Audio.Play(My.Resources.Terraria___Overworld_Day_8_Bit_Theme, AudioPlayMode.BackgroundLoop)
+        player.URL = "Terraria - Overworld Day 8-Bit Theme.wav"
+        player.settings.setMode("loop", True)
+        player.controls.play()
     End Sub
 
     Private Sub ExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
