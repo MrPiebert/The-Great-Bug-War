@@ -124,10 +124,13 @@
   <data name="red_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red_06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cropped-1920-1200-900628" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cropped-1920-1200-900628.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

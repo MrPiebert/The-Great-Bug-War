@@ -2,11 +2,14 @@
 Imports System.Drawing
 
 Public Class Customise_Player
-    Dim drag As Boolean
+    Dim reddrag As Boolean
+    Dim bluedrag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
     Dim redShipBitmap As Bitmap
     Dim redShipLocation As Point
+    Dim blueShipBitmap As Bitmap
+    Dim blueShipLocation As Point
 
     Public Sub New()
         InitializeComponent()
@@ -22,27 +25,34 @@ Public Class Customise_Player
         Me.BackgroundImageLayout = ImageLayout.Stretch
         redShipBitmap = New Bitmap(RedShip.Image)
         redShipLocation = RedShip.Location
+        blueShipBitmap = New Bitmap(BlueShip.Image)
+        blueShipLocation = BlueShip.Location
     End Sub
 
     Private Sub Customise_Player_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
         Dim offScreenBitmap As New Bitmap(Me.Width, Me.Height)
         Using offScreenGraphics As Graphics = Graphics.FromImage(offScreenBitmap)
             offScreenGraphics.DrawImage(redShipBitmap, redShipLocation)
+            offScreenGraphics.DrawImage(blueShipBitmap, blueShipLocation)
         End Using
 
         e.Graphics.DrawImage(offScreenBitmap, 0, 0)
     End Sub
 
-    Private Sub RedShip_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+    Private Sub Ship_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If New Rectangle(redShipLocation, redShipBitmap.Size).Contains(e.Location) Then
-            drag = True
+            reddrag = True
+            mousex = e.X
+            mousey = e.Y
+        ElseIf New Rectangle(blueShipLocation, blueShipBitmap.Size).Contains(e.Location) Then
+            bluedrag = True
             mousex = e.X
             mousey = e.Y
         End If
     End Sub
 
-    Private Sub RedShip_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
-        If drag Then
+    Private Sub Ship_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
+        If reddrag Then
             Dim deltaX As Integer = e.X - mousex
             Dim deltaY As Integer = e.Y - mousey
 
@@ -60,7 +70,36 @@ Public Class Customise_Player
                 If redShipRect.IntersectsWith(selectedZoneRect) Then
                     ' Snap red ship to the location of the selectedZone PictureBox
                     redShipLocation = selectedZone.Location
+                    blueShipLocation = BlueShip.Location
                     selectedShip.Text = "Red Ship"
+                End If
+
+                Invalidate() ' Invalidate the form to trigger a repaint
+            End If
+
+            mousex = e.X
+            mousey = e.Y
+
+        ElseIf bluedrag Then
+            Dim deltaX As Integer = e.X - mousex
+            Dim deltaY As Integer = e.Y - mousey
+
+            blueShipLocation.X += deltaX
+            blueShipLocation.Y += deltaY
+
+            ' Check if the new location is within the form
+            If blueShipLocation.X >= 0 And blueShipLocation.X + blueShipBitmap.Width <= Me.Width And
+               blueShipLocation.Y >= 0 And blueShipLocation.Y + blueShipBitmap.Height <= Me.Height Then
+
+                ' Check if the red ship overlaps with the selectedZone PictureBox
+                Dim selectedZoneRect As New Rectangle(selectedZone.Location, selectedZone.Size)
+                Dim blueShipRect As New Rectangle(blueShipLocation, blueShipBitmap.Size)
+
+                If blueShipRect.IntersectsWith(selectedZoneRect) Then
+                    ' Snap red ship to the location of the selectedZone PictureBox
+                    blueShipLocation = selectedZone.Location
+                    redShipLocation = RedShip.Location
+                    selectedShip.Text = "Blue Ship"
                 End If
 
                 Invalidate() ' Invalidate the form to trigger a repaint
@@ -71,7 +110,9 @@ Public Class Customise_Player
         End If
     End Sub
 
-    Private Sub RedShip_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
-        drag = False
+    Private Sub Ship_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
+        reddrag = False
+        bluedrag = False
     End Sub
+
 End Class

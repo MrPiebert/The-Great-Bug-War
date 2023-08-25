@@ -27,8 +27,10 @@ Partial Class Customise_Player
         Me.RedShip = New System.Windows.Forms.PictureBox()
         Me.selectedZone = New System.Windows.Forms.PictureBox()
         Me.selectedShip = New System.Windows.Forms.Label()
+        Me.BlueShip = New System.Windows.Forms.PictureBox()
         CType(Me.RedShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.selectedZone, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BlueShip, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BackBtn
@@ -70,9 +72,10 @@ Partial Class Customise_Player
         'selectedZone
         '
         Me.selectedZone.BackColor = System.Drawing.Color.Transparent
-        Me.selectedZone.Location = New System.Drawing.Point(370, 180)
+        Me.selectedZone.Location = New System.Drawing.Point(370, 184)
         Me.selectedZone.Name = "selectedZone"
         Me.selectedZone.Size = New System.Drawing.Size(50, 50)
+        Me.selectedZone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.selectedZone.TabIndex = 3
         Me.selectedZone.TabStop = False
         '
@@ -85,12 +88,24 @@ Partial Class Customise_Player
         Me.selectedShip.TabIndex = 4
         Me.selectedShip.Text = "Label2"
         '
+        'BlueShip
+        '
+        Me.BlueShip.Image = Global.The_Great_Bug_War.My.Resources.Resources.blue_01
+        Me.BlueShip.Location = New System.Drawing.Point(445, 332)
+        Me.BlueShip.Name = "BlueShip"
+        Me.BlueShip.Size = New System.Drawing.Size(50, 50)
+        Me.BlueShip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BlueShip.TabIndex = 5
+        Me.BlueShip.TabStop = False
+        Me.BlueShip.Visible = False
+        '
         'Customise_Player
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.The_Great_Bug_War.My.Resources.Resources._1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BlueShip)
         Me.Controls.Add(Me.selectedShip)
         Me.Controls.Add(Me.RedShip)
         Me.Controls.Add(Me.Label1)
@@ -102,6 +117,7 @@ Partial Class Customise_Player
         Me.Text = "Customise_Player"
         CType(Me.RedShip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.selectedZone, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BlueShip, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -112,4 +128,5 @@ Partial Class Customise_Player
     Friend WithEvents RedShip As PictureBox
     Friend WithEvents selectedZone As PictureBox
     Friend WithEvents selectedShip As Label
+    Friend WithEvents BlueShip As PictureBox
 End Class
