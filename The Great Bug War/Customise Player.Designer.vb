@@ -31,12 +31,26 @@ Partial Class Customise_Player
         Me.GreenShip = New System.Windows.Forms.PictureBox()
         Me.PurpleShip = New System.Windows.Forms.PictureBox()
         Me.BlackShip = New System.Windows.Forms.PictureBox()
+        Me.StingType = New System.Windows.Forms.PictureBox()
+        Me.WingType = New System.Windows.Forms.PictureBox()
+        Me.StringType = New System.Windows.Forms.PictureBox()
+        Me.Carapace = New System.Windows.Forms.PictureBox()
+        Me.Buzz = New System.Windows.Forms.PictureBox()
+        Me.Hose = New System.Windows.Forms.PictureBox()
+        Me.selectedShot = New System.Windows.Forms.Label()
+        Me.selectedSkill = New System.Windows.Forms.Label()
         CType(Me.OrangeShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BlueShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RedShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GreenShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurpleShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BlackShip, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StingType, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WingType, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StringType, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Carapace, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Buzz, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Hose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BackBtn
@@ -78,7 +92,7 @@ Partial Class Customise_Player
         'selectedShip
         '
         Me.selectedShip.AutoSize = True
-        Me.selectedShip.Location = New System.Drawing.Point(606, 104)
+        Me.selectedShip.Location = New System.Drawing.Point(373, 94)
         Me.selectedShip.Name = "selectedShip"
         Me.selectedShip.Size = New System.Drawing.Size(48, 16)
         Me.selectedShip.TabIndex = 4
@@ -139,12 +153,104 @@ Partial Class Customise_Player
         Me.BlackShip.TabStop = False
         Me.BlackShip.Visible = False
         '
+        'StingType
+        '
+        Me.StingType.Image = Global.The_Great_Bug_War.My.Resources.Resources.projectile05_4
+        Me.StingType.Location = New System.Drawing.Point(70, 128)
+        Me.StingType.Name = "StingType"
+        Me.StingType.Size = New System.Drawing.Size(50, 50)
+        Me.StingType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.StingType.TabIndex = 10
+        Me.StingType.TabStop = False
+        Me.StingType.Visible = False
+        '
+        'WingType
+        '
+        Me.WingType.Image = Global.The_Great_Bug_War.My.Resources.Resources.projectile04_3
+        Me.WingType.Location = New System.Drawing.Point(70, 184)
+        Me.WingType.Name = "WingType"
+        Me.WingType.Size = New System.Drawing.Size(50, 50)
+        Me.WingType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.WingType.TabIndex = 11
+        Me.WingType.TabStop = False
+        Me.WingType.Visible = False
+        '
+        'StringType
+        '
+        Me.StringType.Image = Global.The_Great_Bug_War.My.Resources.Resources.projectile03_5
+        Me.StringType.Location = New System.Drawing.Point(70, 240)
+        Me.StringType.Name = "StringType"
+        Me.StringType.Size = New System.Drawing.Size(50, 50)
+        Me.StringType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.StringType.TabIndex = 12
+        Me.StringType.TabStop = False
+        Me.StringType.Visible = False
+        '
+        'Carapace
+        '
+        Me.Carapace.Image = Global.The_Great_Bug_War.My.Resources.Resources.f5c21548b9ef4e43f6184c4209451caeDCUfy5dqBbO8RLpI_0_removebg_preview
+        Me.Carapace.Location = New System.Drawing.Point(659, 128)
+        Me.Carapace.Name = "Carapace"
+        Me.Carapace.Size = New System.Drawing.Size(50, 50)
+        Me.Carapace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Carapace.TabIndex = 13
+        Me.Carapace.TabStop = False
+        Me.Carapace.Visible = False
+        '
+        'Buzz
+        '
+        Me.Buzz.Image = Global.The_Great_Bug_War.My.Resources.Resources.Spray_Can_removebg_preview
+        Me.Buzz.Location = New System.Drawing.Point(659, 184)
+        Me.Buzz.Name = "Buzz"
+        Me.Buzz.Size = New System.Drawing.Size(50, 50)
+        Me.Buzz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Buzz.TabIndex = 14
+        Me.Buzz.TabStop = False
+        Me.Buzz.Visible = False
+        '
+        'Hose
+        '
+        Me.Hose.Image = Global.The_Great_Bug_War.My.Resources.Resources.kv0oj23ao6t41_removebg_preview
+        Me.Hose.Location = New System.Drawing.Point(659, 240)
+        Me.Hose.Name = "Hose"
+        Me.Hose.Size = New System.Drawing.Size(50, 50)
+        Me.Hose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Hose.TabIndex = 15
+        Me.Hose.TabStop = False
+        Me.Hose.Visible = False
+        '
+        'selectedShot
+        '
+        Me.selectedShot.AutoSize = True
+        Me.selectedShot.Location = New System.Drawing.Point(294, 94)
+        Me.selectedShot.Name = "selectedShot"
+        Me.selectedShot.Size = New System.Drawing.Size(48, 16)
+        Me.selectedShot.TabIndex = 16
+        Me.selectedShot.Text = "Label2"
+        '
+        'selectedSkill
+        '
+        Me.selectedSkill.AutoSize = True
+        Me.selectedSkill.Location = New System.Drawing.Point(448, 94)
+        Me.selectedSkill.Name = "selectedSkill"
+        Me.selectedSkill.Size = New System.Drawing.Size(48, 16)
+        Me.selectedSkill.TabIndex = 17
+        Me.selectedSkill.Text = "Label2"
+        '
         'Customise_Player
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.The_Great_Bug_War.My.Resources.Resources._1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.selectedSkill)
+        Me.Controls.Add(Me.selectedShot)
+        Me.Controls.Add(Me.Hose)
+        Me.Controls.Add(Me.Buzz)
+        Me.Controls.Add(Me.Carapace)
+        Me.Controls.Add(Me.StringType)
+        Me.Controls.Add(Me.WingType)
+        Me.Controls.Add(Me.StingType)
         Me.Controls.Add(Me.BlackShip)
         Me.Controls.Add(Me.PurpleShip)
         Me.Controls.Add(Me.GreenShip)
@@ -164,6 +270,12 @@ Partial Class Customise_Player
         CType(Me.GreenShip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurpleShip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BlackShip, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StingType, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WingType, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StringType, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Carapace, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Buzz, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Hose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -178,4 +290,12 @@ Partial Class Customise_Player
     Friend WithEvents GreenShip As PictureBox
     Friend WithEvents PurpleShip As PictureBox
     Friend WithEvents BlackShip As PictureBox
+    Friend WithEvents StingType As PictureBox
+    Friend WithEvents WingType As PictureBox
+    Friend WithEvents StringType As PictureBox
+    Friend WithEvents Carapace As PictureBox
+    Friend WithEvents Buzz As PictureBox
+    Friend WithEvents Hose As PictureBox
+    Friend WithEvents selectedShot As Label
+    Friend WithEvents selectedSkill As Label
 End Class

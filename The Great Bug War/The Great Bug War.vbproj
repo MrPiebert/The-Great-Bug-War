@@ -210,5 +210,38 @@
   <ItemGroup>
     <None Include="Resources\darkgrey_01.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectile05-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectile04-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectile03-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectile05-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spray_Can-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f5c21548b9ef4e43f6184c4209451caeDCUfy5dqBbO8RLpI-0-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kv0oj23ao6t41-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kv0oj23ao6t41-removebg-preview-1.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kv0oj23ao6t41-removebg-preview-1.png %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kv0oj23ao6t41-removebg-preview-1.png %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kv0oj23ao6t41-removebg-preview-1.png %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

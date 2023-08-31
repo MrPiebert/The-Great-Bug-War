@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.VisualBasic.Devices
+Imports System.Diagnostics.Contracts
 Imports System.Drawing
 
 Public Class Customise_Player
@@ -8,6 +9,15 @@ Public Class Customise_Player
     Dim greendrag As Boolean
     Dim purpledrag As Boolean
     Dim blackdrag As Boolean
+
+    Dim stingTypedrag As Boolean
+    Dim wingTypedrag As Boolean
+    Dim stringTypedrag As Boolean
+
+    Dim carapacedrag As Boolean
+    Dim buzzdrag As Boolean
+    Dim hosedrag As Boolean
+
     Dim mousex As Integer
     Dim mousey As Integer
     Dim redShipBitmap As Bitmap
@@ -22,9 +32,27 @@ Public Class Customise_Player
     Dim purpleShipLocation As Point
     Dim blackShipBitmap As Bitmap
     Dim blackShipLocation As Point
+
+    Dim stingTypeBitmap As Bitmap
+    Dim wingTypeBitmap As Bitmap
+    Dim stringTypeBitmap As Bitmap
+    Dim stingTypeLocation As Point
+    Dim wingTypeLocation As Point
+    Dim stringTypeLocation As Point
+
+    Dim carapaceBitmap As Bitmap
+    Dim buzzBitmap As Bitmap
+    Dim hoseBitmap As Bitmap
+    Dim carapaceLocation As Point
+    Dim buzzLocation As Point
+    Dim hoseLocation As Point
+
     Dim selectedZoneCenter As New Point(301, 180) ' Center of the selection zone
     Dim selectedZoneSize As New Size(55, 55) ' Size of the selection zone (square)
-
+    Dim shotZoneCenter As New Point(251, 180) ' Center of the shot selection zone
+    Dim shotZoneSize As New Size(30, 55) ' Size of the shot selection zone (square)
+    Dim skillZoneCenter As New Point(351, 180) ' Center of the skill selection zone
+    Dim skillZoneSize As New Size(30, 55) ' Size of the skill selection zone (square)
     Public Sub New()
         InitializeComponent()
         Me.DoubleBuffered = True
@@ -49,6 +77,20 @@ Public Class Customise_Player
         purpleShipLocation = PurpleShip.Location
         blackShipBitmap = New Bitmap(BlackShip.Image)
         blackShipLocation = BlackShip.Location
+
+        stingTypeBitmap = New Bitmap(StingType.Image)
+        stingTypeLocation = StingType.Location
+        wingTypeBitmap = New Bitmap(WingType.Image)
+        wingTypeLocation = WingType.Location
+        stringTypeBitmap = New Bitmap(StringType.Image)
+        stringTypeLocation = StringType.Location
+
+        carapaceBitmap = New Bitmap(Carapace.Image, 50, 50)
+        carapaceLocation = Carapace.Location
+        buzzBitmap = New Bitmap(Buzz.Image, 50, 50)
+        buzzLocation = Buzz.Location
+        hoseBitmap = New Bitmap(Hose.Image, 50, 50)
+        hoseLocation = Hose.Location
     End Sub
 
     Private Sub Customise_Player_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
@@ -60,6 +102,14 @@ Public Class Customise_Player
             offScreenGraphics.DrawImage(greenShipBitmap, greenShipLocation)
             offScreenGraphics.DrawImage(purpleShipBitmap, purpleShipLocation)
             offScreenGraphics.DrawImage(blackShipBitmap, blackShipLocation)
+
+            offScreenGraphics.DrawImage(stingTypeBitmap, stingTypeLocation)
+            offScreenGraphics.DrawImage(wingTypeBitmap, wingTypeLocation)
+            offScreenGraphics.DrawImage(stringTypeBitmap, stringTypeLocation)
+
+            offScreenGraphics.DrawImage(carapaceBitmap, carapaceLocation)
+            offScreenGraphics.DrawImage(buzzBitmap, buzzLocation)
+            offScreenGraphics.DrawImage(hoseBitmap, hoseLocation)
             Dim selectionZoneRect As New Rectangle(selectedZoneCenter.X - selectedZoneSize.Width / 2, selectedZoneCenter.Y - selectedZoneSize.Height / 2, selectedZoneSize.Width, selectedZoneSize.Height)
             offScreenGraphics.DrawRectangle(Pens.White, selectionZoneRect)
             ' Check if there's any ship inside the selection zone
@@ -72,6 +122,28 @@ Public Class Customise_Player
 
             If Not anyShipInZone Then
                 selectedShip.Text = "No Ship"
+            End If
+
+            Dim shotZoneRect As New Rectangle(shotZoneCenter.X - shotZoneSize.Width / 2, shotZoneCenter.Y - shotZoneSize.Height / 2, shotZoneSize.Width, shotZoneSize.Height)
+            offScreenGraphics.DrawRectangle(Pens.White, shotZoneRect)
+            ' Check if there's any ship inside the selection zone
+            Dim anyShotInZone As Boolean = shotZoneRect.IntersectsWith(New Rectangle(stingTypeLocation, stingTypeBitmap.Size)) OrElse
+                                      shotZoneRect.IntersectsWith(New Rectangle(wingTypeLocation, wingTypeBitmap.Size)) OrElse
+                                      shotZoneRect.IntersectsWith(New Rectangle(stringTypeLocation, stringTypeBitmap.Size))
+
+            If Not anyShotInZone Then
+                selectedShot.Text = "No Shot!"
+            End If
+
+            Dim skillZoneRect As New Rectangle(skillZoneCenter.X - skillZoneSize.Width / 2, skillZoneCenter.Y - skillZoneSize.Height / 2, skillZoneSize.Width, skillZoneSize.Height)
+            offScreenGraphics.DrawRectangle(Pens.White, skillZoneRect)
+            ' Check if there's any ship inside the selection zone
+            Dim anySkillInZone As Boolean = skillZoneRect.IntersectsWith(New Rectangle(carapaceLocation, carapaceBitmap.Size)) OrElse
+                                      skillZoneRect.IntersectsWith(New Rectangle(buzzLocation, buzzBitmap.Size)) OrElse
+                                      skillZoneRect.IntersectsWith(New Rectangle(hoseLocation, hoseBitmap.Size))
+
+            If Not anySkillInZone Then
+                selectedSkill.Text = "No Skill???"
             End If
         End Using
 
@@ -101,6 +173,30 @@ Public Class Customise_Player
             mousey = e.Y
         ElseIf New Rectangle(blackShipLocation, blackShipBitmap.Size).Contains(e.Location) Then
             blackdrag = True
+            mousex = e.X
+            mousey = e.Y
+        ElseIf New Rectangle(stringTypeLocation, stringTypeBitmap.Size).Contains(e.Location) Then
+            stringTypedrag = True
+            mousex = e.X
+            mousey = e.Y
+        ElseIf New Rectangle(wingTypeLocation, wingTypeBitmap.Size).Contains(e.Location) Then
+            wingTypedrag = True
+            mousex = e.X
+            mousey = e.Y
+        ElseIf New Rectangle(stingTypeLocation, stingTypeBitmap.Size).Contains(e.Location) Then
+            stingTypedrag = True
+            mousex = e.X
+            mousey = e.Y
+        ElseIf New Rectangle(carapaceLocation, carapaceBitmap.Size).Contains(e.Location) Then
+            carapacedrag = True
+            mousex = e.X
+            mousey = e.Y
+        ElseIf New Rectangle(buzzLocation, buzzBitmap.Size).Contains(e.Location) Then
+            buzzdrag = True
+            mousex = e.X
+            mousey = e.Y
+        ElseIf New Rectangle(hoseLocation, hoseBitmap.Size).Contains(e.Location) Then
+            hosedrag = True
             mousex = e.X
             mousey = e.Y
         End If
@@ -209,6 +305,106 @@ Public Class Customise_Player
             mousex = e.X
             mousey = e.Y
 
+        ElseIf stringTypedrag Then
+            Dim deltaX As Integer = e.X - mousex
+            Dim deltaY As Integer = e.Y - mousey
+
+            stringTypeLocation.X += deltaX
+            stringTypeLocation.Y += deltaY
+
+            ' Check if the new location is within the form
+            If stringTypeLocation.X >= 0 And stringTypeLocation.X + stringTypeBitmap.Width <= Me.Width And
+               stringTypeLocation.Y >= 0 And stringTypeLocation.Y + stringTypeBitmap.Height <= Me.Height Then
+
+                Invalidate() ' Invalidate the form to trigger a repaint
+            End If
+
+            mousex = e.X
+            mousey = e.Y
+
+        ElseIf wingTypedrag Then
+            Dim deltaX As Integer = e.X - mousex
+            Dim deltaY As Integer = e.Y - mousey
+
+            wingTypeLocation.X += deltaX
+            wingTypeLocation.Y += deltaY
+
+            ' Check if the new location is within the form
+            If wingTypeLocation.X >= 0 And wingTypeLocation.X + wingTypeBitmap.Width <= Me.Width And
+               wingTypeLocation.Y >= 0 And wingTypeLocation.Y + wingTypeBitmap.Height <= Me.Height Then
+
+                Invalidate() ' Invalidate the form to trigger a repaint
+            End If
+
+            mousex = e.X
+            mousey = e.Y
+
+        ElseIf stingTypedrag Then
+            Dim deltaX As Integer = e.X - mousex
+            Dim deltaY As Integer = e.Y - mousey
+
+            stingTypeLocation.X += deltaX
+            stingTypeLocation.Y += deltaY
+
+            ' Check if the new location is within the form
+            If stingTypeLocation.X >= 0 And stingTypeLocation.X + stingTypeBitmap.Width <= Me.Width And
+               stingTypeLocation.Y >= 0 And stingTypeLocation.Y + stingTypeBitmap.Height <= Me.Height Then
+
+                Invalidate() ' Invalidate the form to trigger a repaint
+            End If
+
+            mousex = e.X
+            mousey = e.Y
+        ElseIf carapacedrag Then
+            Dim deltaX As Integer = e.X - mousex
+            Dim deltaY As Integer = e.Y - mousey
+
+            carapaceLocation.X += deltaX
+            carapaceLocation.Y += deltaY
+
+            ' Check if the new location is within the form
+            If carapaceLocation.X >= 0 And carapaceLocation.X + carapaceBitmap.Width <= Me.Width And
+               carapaceLocation.Y >= 0 And carapaceLocation.Y + carapaceBitmap.Height <= Me.Height Then
+
+                Invalidate() ' Invalidate the form to trigger a repaint
+            End If
+
+            mousex = e.X
+            mousey = e.Y
+
+        ElseIf buzzdrag Then
+            Dim deltaX As Integer = e.X - mousex
+            Dim deltaY As Integer = e.Y - mousey
+
+            buzzLocation.X += deltaX
+            buzzLocation.Y += deltaY
+
+            ' Check if the new location is within the form
+            If buzzLocation.X >= 0 And buzzLocation.X + buzzBitmap.Width <= Me.Width And
+               buzzLocation.Y >= 0 And buzzLocation.Y + buzzBitmap.Height <= Me.Height Then
+
+                Invalidate() ' Invalidate the form to trigger a repaint
+            End If
+
+            mousex = e.X
+            mousey = e.Y
+
+        ElseIf hosedrag Then
+            Dim deltaX As Integer = e.X - mousex
+            Dim deltaY As Integer = e.Y - mousey
+
+            hoseLocation.X += deltaX
+            hoseLocation.Y += deltaY
+
+            ' Check if the new location is within the form
+            If hoseLocation.X >= 0 And hoseLocation.X + hoseBitmap.Width <= Me.Width And
+               hoseLocation.Y >= 0 And hoseLocation.Y + hoseBitmap.Height <= Me.Height Then
+
+                Invalidate() ' Invalidate the form to trigger a repaint
+            End If
+
+            mousex = e.X
+            mousey = e.Y
         End If
     End Sub
 
@@ -302,6 +498,92 @@ Public Class Customise_Player
                 purpleShipLocation = PurpleShip.Location
                 selectedShip.Text = "Black Ship"
             End If
+
+        ElseIf stingTypedrag Then
+            Dim stingTypeRect As New Rectangle(stingTypeLocation.X - stingTypeBitmap.Width / 2, stingTypeLocation.Y - stingTypeBitmap.Height / 2, stingTypeBitmap.Width, stingTypeBitmap.Height)
+
+            If Not New Rectangle(shotZoneCenter.X - shotZoneSize.Width / 2, shotZoneCenter.Y - shotZoneSize.Height / 2, shotZoneSize.Width, shotZoneSize.Height).IntersectsWith(stingTypeRect) Then
+                stingTypeLocation = StingType.Location ' Return to original position
+            Else
+                stingTypeLocation = New Point(shotZoneCenter.X - stingTypeBitmap.Width / 2, shotZoneCenter.Y - stingTypeBitmap.Height / 2) ' Snap to selectedZone
+                wingTypeLocation = WingType.Location
+                stringTypeLocation = StringType.Location
+                selectedShot.Text = "Sting Type"
+            End If
+        ElseIf wingTypedrag Then
+            Dim wingTypeRect As New Rectangle(wingTypeLocation.X - wingTypeBitmap.Width / 2, wingTypeLocation.Y - wingTypeBitmap.Height / 2, wingTypeBitmap.Width, wingTypeBitmap.Height)
+
+            If Not New Rectangle(shotZoneCenter.X - shotZoneSize.Width / 2, shotZoneCenter.Y - shotZoneSize.Height / 2, shotZoneSize.Width, shotZoneSize.Height).IntersectsWith(wingTypeRect) Then
+                wingTypeLocation = WingType.Location ' Return to original position
+            Else
+                wingTypeLocation = New Point(shotZoneCenter.X - wingTypeBitmap.Width / 2, shotZoneCenter.Y - wingTypeBitmap.Height / 2) ' Snap to shotZone
+                stingTypeLocation = StingType.Location
+                stringTypeLocation = StringType.Location
+                selectedShot.Text = "Wing Type"
+            End If
+
+        ElseIf stringTypedrag Then
+            Dim stringTypeRect As New Rectangle(stringTypeLocation.X - stringTypeBitmap.Width / 2, stringTypeLocation.Y - stringTypeBitmap.Height / 2, stringTypeBitmap.Width, stringTypeBitmap.Height)
+
+            If Not New Rectangle(shotZoneCenter.X - shotZoneSize.Width / 2, shotZoneCenter.Y - shotZoneSize.Height / 2, shotZoneSize.Width, shotZoneSize.Height).IntersectsWith(stringTypeRect) Then
+                stringTypeLocation = StringType.Location ' Return to original position
+            Else
+                stringTypeLocation = New Point(shotZoneCenter.X - stringTypeBitmap.Width / 2, shotZoneCenter.Y - stringTypeBitmap.Height / 2) ' Snap to shotZone
+                stingTypeLocation = StingType.Location
+                wingTypeLocation = WingType.Location
+                selectedShot.Text = "String Type"
+            End If
+
+        ElseIf bluedrag Then
+            Dim blueShipRect As New Rectangle(blueShipLocation.X - blueShipBitmap.Width / 2, blueShipLocation.Y - blueShipBitmap.Height / 2, blueShipBitmap.Width, blueShipBitmap.Height)
+
+            If Not New Rectangle(selectedZoneCenter.X - selectedZoneSize.Width / 2, selectedZoneCenter.Y - selectedZoneSize.Height / 2, selectedZoneSize.Width, selectedZoneSize.Height).IntersectsWith(blueShipRect) Then
+                blueShipLocation = BlueShip.Location ' Return to original position
+            Else
+                blueShipLocation = New Point(selectedZoneCenter.X - blueShipBitmap.Width / 2, selectedZoneCenter.Y - blueShipBitmap.Height / 2) ' Snap to selectedZone
+                redShipLocation = RedShip.Location
+                orangeShipLocation = OrangeShip.Location
+                greenShipLocation = GreenShip.Location
+                blackShipLocation = BlackShip.Location
+                purpleShipLocation = PurpleShip.Location
+                selectedShip.Text = "Blue Ship"
+            End If
+
+        ElseIf carapacedrag Then
+            Dim carapaceRect As New Rectangle(carapaceLocation.X - carapaceBitmap.Width / 2, carapaceLocation.Y - carapaceBitmap.Height / 2, carapaceBitmap.Width, carapaceBitmap.Height)
+
+            If Not New Rectangle(skillZoneCenter.X - skillZoneSize.Width / 2, skillZoneCenter.Y - skillZoneSize.Height / 2, skillZoneSize.Width, skillZoneSize.Height).IntersectsWith(carapaceRect) Then
+                carapaceLocation = Carapace.Location ' Return to original position
+            Else
+                carapaceLocation = New Point(skillZoneCenter.X - hoseBitmap.Width / 2, skillZoneCenter.Y - hoseBitmap.Height / 2) ' Snap to selectedZone
+                buzzLocation = Buzz.Location
+                hoseLocation = Hose.Location
+                selectedSkill.Text = "Carapace"
+            End If
+
+        ElseIf buzzdrag Then
+            Dim buzzRect As New Rectangle(buzzLocation.X - buzzBitmap.Width / 2, buzzLocation.Y - buzzBitmap.Height / 2, buzzBitmap.Width, buzzBitmap.Height)
+
+            If Not New Rectangle(skillZoneCenter.X - skillZoneSize.Width / 2, skillZoneCenter.Y - skillZoneSize.Height / 2, skillZoneSize.Width, skillZoneSize.Height).IntersectsWith(buzzRect) Then
+                buzzLocation = Buzz.Location ' Return to original position
+            Else
+                buzzLocation = New Point(skillZoneCenter.X - hoseBitmap.Width / 2, skillZoneCenter.Y - hoseBitmap.Height / 2) ' Snap to selectedZone
+                carapaceLocation = Carapace.Location
+                hoseLocation = Hose.Location
+                selectedSkill.Text = "Buzz"
+            End If
+
+        ElseIf hosedrag Then
+            Dim hoseRect As New Rectangle(hoseLocation.X - hoseBitmap.Width / 2, hoseLocation.Y - hoseBitmap.Height / 2, hoseBitmap.Width, hoseBitmap.Height)
+
+            If Not New Rectangle(skillZoneCenter.X - skillZoneSize.Width / 2, skillZoneCenter.Y - skillZoneSize.Height / 2, skillZoneSize.Width, skillZoneSize.Height).IntersectsWith(hoseRect) Then
+                hoseLocation = Hose.Location ' Return to original position
+            Else
+                hoseLocation = New Point(skillZoneCenter.X - hoseBitmap.Width / 2, skillZoneCenter.Y - hoseBitmap.Height / 2) ' Snap to selectedZone
+                carapaceLocation = Carapace.Location
+                buzzLocation = Buzz.Location
+                selectedSkill.Text = "Hose"
+            End If
         End If
         reddrag = False
         bluedrag = False
@@ -309,6 +591,13 @@ Public Class Customise_Player
         greendrag = False
         purpledrag = False
         blackdrag = False
+        stingTypedrag = False
+        wingTypedrag = False
+        stringTypedrag = False
+        carapacedrag = False
+        buzzdrag = False
+        hosedrag = False
+
         Invalidate() ' Trigger a repaint
     End Sub
 
