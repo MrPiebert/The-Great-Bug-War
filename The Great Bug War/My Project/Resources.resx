@@ -121,16 +121,28 @@
   <data name="Terraria___Overworld_Day_8_Bit_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Terraria - Overworld Day 8-Bit Theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="red_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\red_06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="green_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange_05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="purple_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\purple_06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cropped-1920-1200-900628" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cropped-1920-1200-900628.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blue_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="darkgrey_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\darkgrey_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
