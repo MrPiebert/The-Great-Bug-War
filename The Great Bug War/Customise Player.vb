@@ -63,17 +63,6 @@ Public Class Customise_Player
             If redShipLocation.X >= 0 And redShipLocation.X + redShipBitmap.Width <= Me.Width And
                redShipLocation.Y >= 0 And redShipLocation.Y + redShipBitmap.Height <= Me.Height Then
 
-                ' Check if the red ship overlaps with the selectedZone PictureBox
-                Dim selectedZoneRect As New Rectangle(selectedZone.Location, selectedZone.Size)
-                Dim redShipRect As New Rectangle(redShipLocation, redShipBitmap.Size)
-
-                If redShipRect.IntersectsWith(selectedZoneRect) Then
-                    ' Snap red ship to the location of the selectedZone PictureBox
-                    redShipLocation = selectedZone.Location
-                    blueShipLocation = BlueShip.Location
-                    selectedShip.Text = "Red Ship"
-                End If
-
                 Invalidate() ' Invalidate the form to trigger a repaint
             End If
 
@@ -91,17 +80,6 @@ Public Class Customise_Player
             If blueShipLocation.X >= 0 And blueShipLocation.X + blueShipBitmap.Width <= Me.Width And
                blueShipLocation.Y >= 0 And blueShipLocation.Y + blueShipBitmap.Height <= Me.Height Then
 
-                ' Check if the red ship overlaps with the selectedZone PictureBox
-                Dim selectedZoneRect As New Rectangle(selectedZone.Location, selectedZone.Size)
-                Dim blueShipRect As New Rectangle(blueShipLocation, blueShipBitmap.Size)
-
-                If blueShipRect.IntersectsWith(selectedZoneRect) Then
-                    ' Snap red ship to the location of the selectedZone PictureBox
-                    blueShipLocation = selectedZone.Location
-                    redShipLocation = RedShip.Location
-                    selectedShip.Text = "Blue Ship"
-                End If
-
                 Invalidate() ' Invalidate the form to trigger a repaint
             End If
 
@@ -111,8 +89,27 @@ Public Class Customise_Player
     End Sub
 
     Private Sub Ship_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
+        If reddrag Then
+            If Not New Rectangle(selectedZone.Location, selectedZone.Size).Contains(e.Location) Then
+                redShipLocation = RedShip.Location ' Return to original position
+            Else
+                redShipLocation = selectedZone.Location ' Snap to selectedZone
+                blueShipLocation = BlueShip.Location
+                selectedShip.Text = "Red Ship"
+            End If
+        ElseIf bluedrag Then
+            If Not New Rectangle(selectedZone.Location, selectedZone.Size).Contains(e.Location) Then
+                blueShipLocation = BlueShip.Location ' Return to original position
+            Else
+                blueShipLocation = selectedZone.Location ' Snap to selectedZone
+                redShipLocation = RedShip.Location
+                selectedShip.Text = "Blue Ship"
+            End If
+        End If
+
         reddrag = False
         bluedrag = False
+        Invalidate() ' Trigger a repaint
     End Sub
 
 End Class
