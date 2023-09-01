@@ -3,6 +3,7 @@ Imports System.IO
 
 Public Class Form1
     Public player As New WindowsMediaPlayer
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BackgroundImageLayout = ImageLayout.Stretch                      'sets background image size
         player.URL = "Terraria - Overworld Day 8-Bit Theme.wav"

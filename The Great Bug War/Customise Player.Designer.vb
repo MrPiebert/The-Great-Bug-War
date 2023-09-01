@@ -39,6 +39,7 @@ Partial Class Customise_Player
         Me.Hose = New System.Windows.Forms.PictureBox()
         Me.selectedShot = New System.Windows.Forms.Label()
         Me.selectedSkill = New System.Windows.Forms.Label()
+        Me.BeginBtn = New System.Windows.Forms.Label()
         CType(Me.OrangeShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BlueShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RedShip, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,11 +72,11 @@ Partial Class Customise_Player
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(251, 22)
+        Me.Label1.Location = New System.Drawing.Point(222, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(312, 27)
+        Me.Label1.Size = New System.Drawing.Size(372, 54)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Build Your Ship"
+        Me.Label1.Text = "Drag and Drop " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to Build Your Ship"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'OrangeShip
@@ -92,11 +93,15 @@ Partial Class Customise_Player
         'selectedShip
         '
         Me.selectedShip.AutoSize = True
-        Me.selectedShip.Location = New System.Drawing.Point(373, 94)
+        Me.selectedShip.BackColor = System.Drawing.Color.Transparent
+        Me.selectedShip.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.selectedShip.ForeColor = System.Drawing.Color.MediumSeaGreen
+        Me.selectedShip.Location = New System.Drawing.Point(350, 84)
         Me.selectedShip.Name = "selectedShip"
-        Me.selectedShip.Size = New System.Drawing.Size(48, 16)
+        Me.selectedShip.Size = New System.Drawing.Size(99, 18)
         Me.selectedShip.TabIndex = 4
-        Me.selectedShip.Text = "Label2"
+        Me.selectedShip.Text = "No Ship"
+        Me.selectedShip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BlueShip
         '
@@ -156,7 +161,7 @@ Partial Class Customise_Player
         'StingType
         '
         Me.StingType.Image = Global.The_Great_Bug_War.My.Resources.Resources.projectile05_4
-        Me.StingType.Location = New System.Drawing.Point(70, 128)
+        Me.StingType.Location = New System.Drawing.Point(118, 128)
         Me.StingType.Name = "StingType"
         Me.StingType.Size = New System.Drawing.Size(50, 50)
         Me.StingType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -167,7 +172,7 @@ Partial Class Customise_Player
         'WingType
         '
         Me.WingType.Image = Global.The_Great_Bug_War.My.Resources.Resources.projectile04_3
-        Me.WingType.Location = New System.Drawing.Point(70, 184)
+        Me.WingType.Location = New System.Drawing.Point(118, 184)
         Me.WingType.Name = "WingType"
         Me.WingType.Size = New System.Drawing.Size(50, 50)
         Me.WingType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -178,7 +183,7 @@ Partial Class Customise_Player
         'StringType
         '
         Me.StringType.Image = Global.The_Great_Bug_War.My.Resources.Resources.projectile03_5
-        Me.StringType.Location = New System.Drawing.Point(70, 240)
+        Me.StringType.Location = New System.Drawing.Point(118, 240)
         Me.StringType.Name = "StringType"
         Me.StringType.Size = New System.Drawing.Size(50, 50)
         Me.StringType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -189,7 +194,7 @@ Partial Class Customise_Player
         'Carapace
         '
         Me.Carapace.Image = Global.The_Great_Bug_War.My.Resources.Resources.f5c21548b9ef4e43f6184c4209451caeDCUfy5dqBbO8RLpI_0_removebg_preview
-        Me.Carapace.Location = New System.Drawing.Point(659, 128)
+        Me.Carapace.Location = New System.Drawing.Point(619, 128)
         Me.Carapace.Name = "Carapace"
         Me.Carapace.Size = New System.Drawing.Size(50, 50)
         Me.Carapace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -200,7 +205,7 @@ Partial Class Customise_Player
         'Buzz
         '
         Me.Buzz.Image = Global.The_Great_Bug_War.My.Resources.Resources.Spray_Can_removebg_preview
-        Me.Buzz.Location = New System.Drawing.Point(659, 184)
+        Me.Buzz.Location = New System.Drawing.Point(619, 184)
         Me.Buzz.Name = "Buzz"
         Me.Buzz.Size = New System.Drawing.Size(50, 50)
         Me.Buzz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -210,8 +215,8 @@ Partial Class Customise_Player
         '
         'Hose
         '
-        Me.Hose.Image = Global.The_Great_Bug_War.My.Resources.Resources.kv0oj23ao6t41_removebg_preview
-        Me.Hose.Location = New System.Drawing.Point(659, 240)
+        Me.Hose.Image = Global.The_Great_Bug_War.My.Resources.Resources._removal_ai__93560fd2_eb40_48de_b1ff_e54c01f835ac_1000_f_92205404_exfuaygjfnqrd4tvbn2ppjfjshnonads
+        Me.Hose.Location = New System.Drawing.Point(625, 249)
         Me.Hose.Name = "Hose"
         Me.Hose.Size = New System.Drawing.Size(50, 50)
         Me.Hose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -222,20 +227,40 @@ Partial Class Customise_Player
         'selectedShot
         '
         Me.selectedShot.AutoSize = True
-        Me.selectedShot.Location = New System.Drawing.Point(294, 94)
+        Me.selectedShot.BackColor = System.Drawing.Color.Transparent
+        Me.selectedShot.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.selectedShot.ForeColor = System.Drawing.Color.MediumSeaGreen
+        Me.selectedShot.Location = New System.Drawing.Point(88, 84)
         Me.selectedShot.Name = "selectedShot"
-        Me.selectedShot.Size = New System.Drawing.Size(48, 16)
+        Me.selectedShot.Size = New System.Drawing.Size(125, 18)
         Me.selectedShot.TabIndex = 16
-        Me.selectedShot.Text = "Label2"
+        Me.selectedShot.Text = "No Weapon"
+        Me.selectedShot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'selectedSkill
         '
         Me.selectedSkill.AutoSize = True
-        Me.selectedSkill.Location = New System.Drawing.Point(448, 94)
+        Me.selectedSkill.BackColor = System.Drawing.Color.Transparent
+        Me.selectedSkill.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.selectedSkill.ForeColor = System.Drawing.Color.MediumSeaGreen
+        Me.selectedSkill.Location = New System.Drawing.Point(590, 84)
         Me.selectedSkill.Name = "selectedSkill"
-        Me.selectedSkill.Size = New System.Drawing.Size(48, 16)
+        Me.selectedSkill.Size = New System.Drawing.Size(112, 18)
         Me.selectedSkill.TabIndex = 17
-        Me.selectedSkill.Text = "Label2"
+        Me.selectedSkill.Text = "No Skill"
+        Me.selectedSkill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BeginBtn
+        '
+        Me.BeginBtn.AutoSize = True
+        Me.BeginBtn.BackColor = System.Drawing.Color.Transparent
+        Me.BeginBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BeginBtn.ForeColor = System.Drawing.Color.White
+        Me.BeginBtn.Location = New System.Drawing.Point(620, 402)
+        Me.BeginBtn.Name = "BeginBtn"
+        Me.BeginBtn.Size = New System.Drawing.Size(112, 27)
+        Me.BeginBtn.TabIndex = 18
+        Me.BeginBtn.Text = "Begin"
         '
         'Customise_Player
         '
@@ -243,6 +268,7 @@ Partial Class Customise_Player
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.The_Great_Bug_War.My.Resources.Resources._1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BeginBtn)
         Me.Controls.Add(Me.selectedSkill)
         Me.Controls.Add(Me.selectedShot)
         Me.Controls.Add(Me.Hose)
@@ -298,4 +324,5 @@ Partial Class Customise_Player
     Friend WithEvents Hose As PictureBox
     Friend WithEvents selectedShot As Label
     Friend WithEvents selectedSkill As Label
+    Friend WithEvents BeginBtn As Label
 End Class

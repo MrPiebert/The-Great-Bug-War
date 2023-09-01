@@ -3,6 +3,15 @@ Imports System.Diagnostics.Contracts
 Imports System.Drawing
 
 Public Class Customise_Player
+
+    Public shipType As String
+    Public shotType As String
+    Public skillType As String
+
+    Dim shipSelected As Boolean
+    Dim shotSelected As Boolean
+    Dim skillSelected As Boolean
+
     Dim reddrag As Boolean
     Dim bluedrag As Boolean
     Dim orangedrag As Boolean
@@ -49,9 +58,9 @@ Public Class Customise_Player
 
     Dim selectedZoneCenter As New Point(301, 180) ' Center of the selection zone
     Dim selectedZoneSize As New Size(55, 55) ' Size of the selection zone (square)
-    Dim shotZoneCenter As New Point(251, 180) ' Center of the shot selection zone
+    Dim shotZoneCenter As New Point(241, 180) ' Center of the shot selection zone
     Dim shotZoneSize As New Size(30, 55) ' Size of the shot selection zone (square)
-    Dim skillZoneCenter As New Point(351, 180) ' Center of the skill selection zone
+    Dim skillZoneCenter As New Point(361, 180) ' Center of the skill selection zone
     Dim skillZoneSize As New Size(30, 55) ' Size of the skill selection zone (square)
     Public Sub New()
         InitializeComponent()
@@ -64,7 +73,6 @@ Public Class Customise_Player
     End Sub
 
     Private Sub Customise_Player_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackgroundImageLayout = ImageLayout.Stretch
         redShipBitmap = New Bitmap(RedShip.Image)
         redShipLocation = RedShip.Location
         blueShipBitmap = New Bitmap(BlueShip.Image)
@@ -89,7 +97,7 @@ Public Class Customise_Player
         carapaceLocation = Carapace.Location
         buzzBitmap = New Bitmap(Buzz.Image, 50, 50)
         buzzLocation = Buzz.Location
-        hoseBitmap = New Bitmap(Hose.Image, 50, 50)
+        hoseBitmap = New Bitmap(Hose.Image, 45, 45)
         hoseLocation = Hose.Location
     End Sub
 
@@ -122,6 +130,7 @@ Public Class Customise_Player
 
             If Not anyShipInZone Then
                 selectedShip.Text = "No Ship"
+                shipSelected = False
             End If
 
             Dim shotZoneRect As New Rectangle(shotZoneCenter.X - shotZoneSize.Width / 2, shotZoneCenter.Y - shotZoneSize.Height / 2, shotZoneSize.Width, shotZoneSize.Height)
@@ -132,7 +141,8 @@ Public Class Customise_Player
                                       shotZoneRect.IntersectsWith(New Rectangle(stringTypeLocation, stringTypeBitmap.Size))
 
             If Not anyShotInZone Then
-                selectedShot.Text = "No Shot!"
+                selectedShot.Text = "No Weapon"
+                shotSelected = False
             End If
 
             Dim skillZoneRect As New Rectangle(skillZoneCenter.X - skillZoneSize.Width / 2, skillZoneCenter.Y - skillZoneSize.Height / 2, skillZoneSize.Width, skillZoneSize.Height)
@@ -143,7 +153,8 @@ Public Class Customise_Player
                                       skillZoneRect.IntersectsWith(New Rectangle(hoseLocation, hoseBitmap.Size))
 
             If Not anySkillInZone Then
-                selectedSkill.Text = "No Skill???"
+                selectedSkill.Text = "No Skill"
+                skillSelected = False
             End If
         End Using
 
@@ -422,6 +433,8 @@ Public Class Customise_Player
                 blackShipLocation = BlackShip.Location
                 purpleShipLocation = PurpleShip.Location
                 selectedShip.Text = "Red Ship"
+                shipType = "Red Ship"
+                shipSelected = True
             End If
         ElseIf bluedrag Then
             Dim blueShipRect As New Rectangle(blueShipLocation.X - blueShipBitmap.Width / 2, blueShipLocation.Y - blueShipBitmap.Height / 2, blueShipBitmap.Width, blueShipBitmap.Height)
@@ -436,6 +449,8 @@ Public Class Customise_Player
                 blackShipLocation = BlackShip.Location
                 purpleShipLocation = PurpleShip.Location
                 selectedShip.Text = "Blue Ship"
+                shipType = "Blue Ship"
+                shipSelected = True
             End If
 
         ElseIf orangedrag Then
@@ -452,6 +467,8 @@ Public Class Customise_Player
                 blackShipLocation = BlackShip.Location
                 purpleShipLocation = PurpleShip.Location
                 selectedShip.Text = "Orange Ship"
+                shipType = "Orange Ship"
+                shipSelected = True
             End If
 
         ElseIf greendrag Then
@@ -467,6 +484,8 @@ Public Class Customise_Player
                 blackShipLocation = BlackShip.Location
                 purpleShipLocation = PurpleShip.Location
                 selectedShip.Text = "Green Ship"
+                shipType = "Green Ship"
+                shipSelected = True
             End If
 
         ElseIf purpledrag Then
@@ -482,6 +501,8 @@ Public Class Customise_Player
                 blackShipLocation = BlackShip.Location
                 greenShipLocation = GreenShip.Location
                 selectedShip.Text = "Purple Ship"
+                shipType = "Purple Ship"
+                shipSelected = True
             End If
 
         ElseIf blackdrag Then
@@ -497,7 +518,10 @@ Public Class Customise_Player
                 greenShipLocation = GreenShip.Location
                 purpleShipLocation = PurpleShip.Location
                 selectedShip.Text = "Black Ship"
+                shipType = "Black Ship"
+                shipSelected = True
             End If
+
 
         ElseIf stingTypedrag Then
             Dim stingTypeRect As New Rectangle(stingTypeLocation.X - stingTypeBitmap.Width / 2, stingTypeLocation.Y - stingTypeBitmap.Height / 2, stingTypeBitmap.Width, stingTypeBitmap.Height)
@@ -509,6 +533,8 @@ Public Class Customise_Player
                 wingTypeLocation = WingType.Location
                 stringTypeLocation = StringType.Location
                 selectedShot.Text = "Sting Type"
+                shotType = "Sting Type"
+                shotSelected = True
             End If
         ElseIf wingTypedrag Then
             Dim wingTypeRect As New Rectangle(wingTypeLocation.X - wingTypeBitmap.Width / 2, wingTypeLocation.Y - wingTypeBitmap.Height / 2, wingTypeBitmap.Width, wingTypeBitmap.Height)
@@ -520,6 +546,8 @@ Public Class Customise_Player
                 stingTypeLocation = StingType.Location
                 stringTypeLocation = StringType.Location
                 selectedShot.Text = "Wing Type"
+                shotType = "Wing Type"
+                shotSelected = True
             End If
 
         ElseIf stringTypedrag Then
@@ -532,6 +560,8 @@ Public Class Customise_Player
                 stingTypeLocation = StingType.Location
                 wingTypeLocation = WingType.Location
                 selectedShot.Text = "String Type"
+                shotType = "String Type"
+                shotSelected = True
             End If
 
         ElseIf bluedrag Then
@@ -547,6 +577,8 @@ Public Class Customise_Player
                 blackShipLocation = BlackShip.Location
                 purpleShipLocation = PurpleShip.Location
                 selectedShip.Text = "Blue Ship"
+                shipType = "Blue Ship"
+                shipSelected = True
             End If
 
         ElseIf carapacedrag Then
@@ -559,6 +591,8 @@ Public Class Customise_Player
                 buzzLocation = Buzz.Location
                 hoseLocation = Hose.Location
                 selectedSkill.Text = "Carapace"
+                skillType = "Carapace"
+                skillSelected = True
             End If
 
         ElseIf buzzdrag Then
@@ -571,6 +605,8 @@ Public Class Customise_Player
                 carapaceLocation = Carapace.Location
                 hoseLocation = Hose.Location
                 selectedSkill.Text = "Buzz"
+                skillType = "Buzz"
+                skillSelected = True
             End If
 
         ElseIf hosedrag Then
@@ -583,6 +619,8 @@ Public Class Customise_Player
                 carapaceLocation = Carapace.Location
                 buzzLocation = Buzz.Location
                 selectedSkill.Text = "Hose"
+                skillType = "Hose"
+                skillSelected = True
             End If
         End If
         reddrag = False
@@ -601,4 +639,10 @@ Public Class Customise_Player
         Invalidate() ' Trigger a repaint
     End Sub
 
+    Private Sub BeginBtn_Click(sender As Object, e As EventArgs) Handles BeginBtn.Click
+        If shipSelected AndAlso shotSelected AndAlso skillSelected Then
+            Me.Hide()
+            Level1.Show()
+        End If
+    End Sub
 End Class
