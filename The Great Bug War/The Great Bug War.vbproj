@@ -255,5 +255,11 @@
   <ItemGroup>
     <None Include="Resources\[removal.ai]_93560fd2-eb40-48de-b1ff-e54c01f835ac-1000_f_92205404_exfuaygjfnqrd4tvbn2ppjfjshnonads.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel-1.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel-1.png %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

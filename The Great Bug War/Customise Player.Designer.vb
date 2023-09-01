@@ -243,7 +243,7 @@ Partial Class Customise_Player
         Me.selectedSkill.BackColor = System.Drawing.Color.Transparent
         Me.selectedSkill.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.selectedSkill.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.selectedSkill.Location = New System.Drawing.Point(590, 84)
+        Me.selectedSkill.Location = New System.Drawing.Point(583, 84)
         Me.selectedSkill.Name = "selectedSkill"
         Me.selectedSkill.Size = New System.Drawing.Size(112, 18)
         Me.selectedSkill.TabIndex = 17
@@ -286,6 +286,7 @@ Partial Class Customise_Player
         Me.Controls.Add(Me.OrangeShip)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BackBtn)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Customise_Player"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

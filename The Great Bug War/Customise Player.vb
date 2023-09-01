@@ -618,7 +618,7 @@ Public Class Customise_Player
                 hoseLocation = New Point(skillZoneCenter.X - hoseBitmap.Width / 2, skillZoneCenter.Y - hoseBitmap.Height / 2) ' Snap to selectedZone
                 carapaceLocation = Carapace.Location
                 buzzLocation = Buzz.Location
-                selectedSkill.Text = "Hose"
+                selectedSkill.Text = "Hose Blast"
                 skillType = "Hose"
                 skillSelected = True
             End If
