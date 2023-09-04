@@ -33,7 +33,7 @@ Public Class Form1
     Private Sub InstructionsBtn_Click(sender As Object, e As EventArgs) Handles InstructionsBtn.Click
         Instructions.Show()
     End Sub
-    Private Sub Play_MouseHover(sender As Object, e As EventArgs) Handles PlayBtn.MouseHover
+    Private Sub Play_MouseHover(sender As Object, e As EventArgs) Handles PlayBtn.MouseEnter
         beep.controls.play()
         PictureBox1.Visible = True
         PlayBtn.Font = New Font("Press Start 2P", 13, FontStyle.Regular)
@@ -43,7 +43,7 @@ Public Class Form1
         PictureBox1.Visible = False
         PlayBtn.Font = New Font("Press Start 2P", 12, FontStyle.Regular)
     End Sub
-    Private Sub Intructions_MouseHover(sender As Object, e As EventArgs) Handles InstructionsBtn.MouseHover
+    Private Sub Intructions_MouseHover(sender As Object, e As EventArgs) Handles InstructionsBtn.MouseEnter
         beep.controls.play()
         PictureBox2.Visible = True
         InstructionsBtn.Font = New Font("Press Start 2P", 13, FontStyle.Regular)
@@ -53,7 +53,7 @@ Public Class Form1
         PictureBox2.Visible = False
         InstructionsBtn.Font = New Font("Press Start 2P", 12, FontStyle.Regular)
     End Sub
-    Private Sub Options_MouseHover(sender As Object, e As EventArgs) Handles OptionsBtn.MouseHover
+    Private Sub Options_MouseHover(sender As Object, e As EventArgs) Handles OptionsBtn.MouseEnter
         beep.controls.play()
         PictureBox3.Visible = True
         OptionsBtn.Font = New Font("Press Start 2P", 13, FontStyle.Regular)
@@ -63,7 +63,7 @@ Public Class Form1
         PictureBox3.Visible = False
         OptionsBtn.Font = New Font("Press Start 2P", 12, FontStyle.Regular)
     End Sub
-    Private Sub HighScore_MouseHover(sender As Object, e As EventArgs) Handles HighBtn.MouseHover
+    Private Sub HighScore_MouseHover(sender As Object, e As EventArgs) Handles HighBtn.MouseEnter
         beep.controls.play()
         PictureBox4.Visible = True
         HighBtn.Font = New Font("Press Start 2P", 13, FontStyle.Regular)
@@ -73,7 +73,7 @@ Public Class Form1
         PictureBox4.Visible = False
         HighBtn.Font = New Font("Press Start 2P", 12, FontStyle.Regular)
     End Sub
-    Private Sub Credits_MouseHover(sender As Object, e As EventArgs) Handles CreditsBtn.MouseHover
+    Private Sub Credits_MouseHover(sender As Object, e As EventArgs) Handles CreditsBtn.MouseEnter
         beep.controls.play()
         PictureBox5.Visible = True
         CreditsBtn.Font = New Font("Press Start 2P", 13, FontStyle.Regular)
@@ -83,7 +83,7 @@ Public Class Form1
         PictureBox5.Visible = False
         CreditsBtn.Font = New Font("Press Start 2P", 12, FontStyle.Regular)
     End Sub
-    Private Sub Exit_MouseHover(sender As Object, e As EventArgs) Handles ExitBtn.MouseHover
+    Private Sub Exit_MouseHover(sender As Object, e As EventArgs) Handles ExitBtn.MouseEnter
         beep.controls.play()
         PictureBox6.Visible = True
         ExitBtn.Font = New Font("Press Start 2P", 13, FontStyle.Regular)

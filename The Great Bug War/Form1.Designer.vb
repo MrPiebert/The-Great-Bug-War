@@ -75,7 +75,7 @@ Partial Class Form1
         Me.InstructionsBtn.BackColor = System.Drawing.Color.Transparent
         Me.InstructionsBtn.Font = New System.Drawing.Font("Press Start 2P", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InstructionsBtn.ForeColor = System.Drawing.Color.White
-        Me.InstructionsBtn.Location = New System.Drawing.Point(331, 316)
+        Me.InstructionsBtn.Location = New System.Drawing.Point(317, 316)
         Me.InstructionsBtn.Name = "InstructionsBtn"
         Me.InstructionsBtn.Size = New System.Drawing.Size(228, 25)
         Me.InstructionsBtn.TabIndex = 2
@@ -150,7 +150,7 @@ Partial Class Form1
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.The_Great_Bug_War.My.Resources.Resources.New_Piskel_1_png__1_
-        Me.PictureBox2.Location = New System.Drawing.Point(298, 309)
+        Me.PictureBox2.Location = New System.Drawing.Point(284, 309)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(45, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
