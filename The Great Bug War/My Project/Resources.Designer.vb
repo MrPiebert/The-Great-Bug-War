@@ -184,6 +184,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property Mute_Icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Mute_Icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property New_Piskel_1_png() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("New Piskel-1.png", resourceCulture)
@@ -267,6 +277,43 @@ Namespace My.Resources
         Public ReadOnly Property red_06() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("red_06", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Public ReadOnly Property ShipChoice() As String
+            Get
+                Return ResourceManager.GetString("ShipChoice", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Public ReadOnly Property ShotChoice() As String
+            Get
+                Return ResourceManager.GetString("ShotChoice", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Public ReadOnly Property SkillChoice() As String
+            Get
+                Return ResourceManager.GetString("SkillChoice", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property Speaker_Icon_svg() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Speaker_Icon.svg", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

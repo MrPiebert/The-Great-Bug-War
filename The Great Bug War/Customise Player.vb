@@ -1,8 +1,15 @@
 ﻿Imports Microsoft.VisualBasic.Devices
 Imports System.Diagnostics.Contracts
 Imports System.Drawing
+Imports System.IO
+
 
 Public Class Customise_Player
+
+    Dim ShipC As StreamWriter = New StreamWriter("ShipChoice.txt")
+    Dim ShotC As StreamWriter = New StreamWriter("ShotChoice.txt")
+    Dim SkillC As StreamWriter = New StreamWriter("SkillChoice.txt")
+
 
     Public shipType As String
     Public shotType As String
@@ -641,6 +648,12 @@ Public Class Customise_Player
 
     Private Sub BeginBtn_Click(sender As Object, e As EventArgs) Handles BeginBtn.Click
         If shipSelected AndAlso shotSelected AndAlso skillSelected Then
+            ShipC.WriteLine(shipType)
+            ShipC.Close()
+            SkillC.WriteLine(skillType)
+            SkillC.Close()
+            ShotC.WriteLine(shotType)
+            ShotC.Close()
             Me.Hide()
             Level1.Show()
         End If

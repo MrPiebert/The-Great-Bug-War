@@ -24,10 +24,12 @@ Partial Class Options
     Private Sub InitializeComponent()
         Me.OptionsLbl = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.AudioBar = New System.Windows.Forms.TrackBar()
         Me.AudioLbl = New System.Windows.Forms.Label()
         Me.BackBtn = New System.Windows.Forms.Label()
-        Me.AudioBar = New System.Windows.Forms.TrackBar()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AudioBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,7 +37,7 @@ Partial Class Options
         '
         Me.OptionsLbl.AutoSize = True
         Me.OptionsLbl.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OptionsLbl.Location = New System.Drawing.Point(75, 24)
+        Me.OptionsLbl.Location = New System.Drawing.Point(86, 34)
         Me.OptionsLbl.Name = "OptionsLbl"
         Me.OptionsLbl.Size = New System.Drawing.Size(152, 27)
         Me.OptionsLbl.TabIndex = 0
@@ -44,6 +46,7 @@ Partial Class Options
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.AudioBar)
         Me.Panel1.Controls.Add(Me.AudioLbl)
         Me.Panel1.Controls.Add(Me.BackBtn)
@@ -53,11 +56,29 @@ Partial Class Options
         Me.Panel1.Size = New System.Drawing.Size(304, 408)
         Me.Panel1.TabIndex = 1
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.The_Great_Bug_War.My.Resources.Resources.Speaker_Icon_svg
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 156)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(61, 54)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
+        '
+        'AudioBar
+        '
+        Me.AudioBar.Location = New System.Drawing.Point(91, 162)
+        Me.AudioBar.Maximum = 100
+        Me.AudioBar.Name = "AudioBar"
+        Me.AudioBar.Size = New System.Drawing.Size(181, 56)
+        Me.AudioBar.TabIndex = 3
+        '
         'AudioLbl
         '
         Me.AudioLbl.AutoSize = True
         Me.AudioLbl.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AudioLbl.Location = New System.Drawing.Point(108, 148)
+        Me.AudioLbl.Location = New System.Drawing.Point(104, 241)
         Me.AudioLbl.Name = "AudioLbl"
         Me.AudioLbl.Size = New System.Drawing.Size(92, 27)
         Me.AudioLbl.TabIndex = 2
@@ -74,14 +95,6 @@ Partial Class Options
         Me.BackBtn.TabIndex = 1
         Me.BackBtn.Text = "Back"
         '
-        'AudioBar
-        '
-        Me.AudioBar.Location = New System.Drawing.Point(57, 230)
-        Me.AudioBar.Maximum = 100
-        Me.AudioBar.Name = "AudioBar"
-        Me.AudioBar.Size = New System.Drawing.Size(181, 56)
-        Me.AudioBar.TabIndex = 3
-        '
         'Options
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -95,6 +108,7 @@ Partial Class Options
         Me.Text = "Options"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AudioBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -105,4 +119,5 @@ Partial Class Options
     Friend WithEvents BackBtn As Label
     Friend WithEvents AudioLbl As Label
     Friend WithEvents AudioBar As TrackBar
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

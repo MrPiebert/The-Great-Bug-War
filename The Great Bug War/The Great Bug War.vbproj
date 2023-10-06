@@ -261,5 +261,20 @@
   <ItemGroup>
     <None Include="Resources\New Piskel-1.png %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShipChoice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShotChoice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkillChoice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Speaker_Icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mute_Icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

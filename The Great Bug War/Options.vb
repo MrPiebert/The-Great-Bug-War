@@ -10,9 +10,11 @@ Public Class Options
         If AudioLbl.Text = "Mute" Then
             Form1.player.controls.pause()
             AudioLbl.Text = "Unmute"
+            PictureBox1.Image = My.Resources.Mute_Icon
         Else
             Form1.player.controls.play()
             AudioLbl.Text = "Mute"
+            PictureBox1.Image = My.Resources.Speaker_Icon_svg
         End If
     End Sub
 
@@ -23,5 +25,18 @@ Public Class Options
 
     Private Sub AudioBar_Scroll(sender As Object, e As EventArgs) Handles AudioBar.Scroll
         Form1.player.settings.volume = AudioBar.Value
+        If AudioBar.Value = 0 Then
+            PictureBox1.Image = My.Resources.Mute_Icon
+        Else
+            PictureBox1.Image = My.Resources.Speaker_Icon_svg
+        End If
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
     End Sub
 End Class
