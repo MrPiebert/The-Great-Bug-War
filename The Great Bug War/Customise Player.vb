@@ -77,9 +77,15 @@ Public Class Customise_Player
     Private Sub BackBtn_Click(sender As Object, e As EventArgs) Handles BackBtn.Click
         Me.Close()
         Form1.Show()
+        ShipC.Close()
+        ShotC.Close()
+        SkillC.Close()
     End Sub
 
     Private Sub Customise_Player_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.BackgroundImageLayout = ImageLayout.Stretch
+
         redShipBitmap = New Bitmap(RedShip.Image)
         redShipLocation = RedShip.Location
         blueShipBitmap = New Bitmap(BlueShip.Image)

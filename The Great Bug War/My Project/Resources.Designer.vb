@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property _1e64c3289a248160c26a3b57b221e282() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("1e64c3289a248160c26a3b57b221e282", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property _removal_ai__93560fd2_eb40_48de_b1ff_e54c01f835ac_1000_f_92205404_exfuaygjfnqrd4tvbn2ppjfjshnonads() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("[removal.ai]_93560fd2-eb40-48de-b1ff-e54c01f835ac-1000_f_92205404_exfuaygjfnqrd4t"& _ 
@@ -324,6 +334,16 @@ Namespace My.Resources
         Public ReadOnly Property Spray_Can_removebg_preview() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Spray_Can-removebg-preview", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property starsBG_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("starsBG_1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

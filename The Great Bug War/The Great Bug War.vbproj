@@ -276,5 +276,11 @@
   <ItemGroup>
     <None Include="Resources\Mute_Icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starsBG_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1e64c3289a248160c26a3b57b221e282.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

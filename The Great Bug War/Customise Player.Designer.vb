@@ -59,7 +59,7 @@ Partial Class Customise_Player
         Me.BackBtn.AutoSize = True
         Me.BackBtn.BackColor = System.Drawing.Color.Transparent
         Me.BackBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BackBtn.ForeColor = System.Drawing.Color.White
+        Me.BackBtn.ForeColor = System.Drawing.Color.Black
         Me.BackBtn.Location = New System.Drawing.Point(28, 402)
         Me.BackBtn.Name = "BackBtn"
         Me.BackBtn.Size = New System.Drawing.Size(92, 27)
@@ -255,7 +255,7 @@ Partial Class Customise_Player
         Me.BeginBtn.AutoSize = True
         Me.BeginBtn.BackColor = System.Drawing.Color.Transparent
         Me.BeginBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BeginBtn.ForeColor = System.Drawing.Color.White
+        Me.BeginBtn.ForeColor = System.Drawing.Color.Black
         Me.BeginBtn.Location = New System.Drawing.Point(620, 402)
         Me.BeginBtn.Name = "BeginBtn"
         Me.BeginBtn.Size = New System.Drawing.Size(112, 27)
@@ -266,7 +266,7 @@ Partial Class Customise_Player
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.The_Great_Bug_War.My.Resources.Resources._1000_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U
+        Me.BackgroundImage = Global.The_Great_Bug_War.My.Resources.Resources._1e64c3289a248160c26a3b57b221e282
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.BeginBtn)
         Me.Controls.Add(Me.selectedSkill)
