@@ -22,9 +22,8 @@ Partial Class Instructions
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Instructions))
         Me.BackBtn = New System.Windows.Forms.Label()
-        Me.IntructionsLbl = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -32,55 +31,36 @@ Partial Class Instructions
         'BackBtn
         '
         Me.BackBtn.AutoSize = True
-        Me.BackBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BackBtn.Location = New System.Drawing.Point(267, 332)
-        Me.BackBtn.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.BackBtn.Font = New System.Drawing.Font("Press Start 2P", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.BackBtn.Location = New System.Drawing.Point(364, 424)
         Me.BackBtn.Name = "BackBtn"
-        Me.BackBtn.Size = New System.Drawing.Size(45, 20)
+        Me.BackBtn.Size = New System.Drawing.Size(92, 27)
         Me.BackBtn.TabIndex = 0
         Me.BackBtn.Text = "Back"
         '
-        'IntructionsLbl
-        '
-        Me.IntructionsLbl.AutoSize = True
-        Me.IntructionsLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IntructionsLbl.Location = New System.Drawing.Point(164, 16)
-        Me.IntructionsLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.IntructionsLbl.Name = "IntructionsLbl"
-        Me.IntructionsLbl.Size = New System.Drawing.Size(123, 26)
-        Me.IntructionsLbl.TabIndex = 1
-        Me.IntructionsLbl.Text = "Instructions"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(34, 81)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(306, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Just press arrow keys to move and Z to shoot and X to skill smh"
-        '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(383, 81)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Image = Global.The_Great_Bug_War.My.Resources.Resources.Capture
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(175, 179)
+        Me.PictureBox1.Size = New System.Drawing.Size(805, 416)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
         'Instructions
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 374)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.IntructionsLbl)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ClientSize = New System.Drawing.Size(800, 460)
         Me.Controls.Add(Me.BackBtn)
+        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Instructions"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Instructions"
@@ -91,7 +71,5 @@ Partial Class Instructions
     End Sub
 
     Friend WithEvents BackBtn As Label
-    Friend WithEvents IntructionsLbl As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
 End Class

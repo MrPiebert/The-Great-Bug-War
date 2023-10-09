@@ -22,7 +22,9 @@ Partial Class HighScores
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HighScores))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BackBtn = New System.Windows.Forms.Label()
         Me.ScoreSeven = New System.Windows.Forms.Label()
         Me.ScoreSix = New System.Windows.Forms.Label()
         Me.ScoreFive = New System.Windows.Forms.Label()
@@ -31,7 +33,6 @@ Partial Class HighScores
         Me.ScoreTwo = New System.Windows.Forms.Label()
         Me.ScoreOne = New System.Windows.Forms.Label()
         Me.HighScoresLbl = New System.Windows.Forms.Label()
-        Me.BackBtn = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,75 +53,85 @@ Partial Class HighScores
         Me.Panel1.Size = New System.Drawing.Size(264, 423)
         Me.Panel1.TabIndex = 0
         '
+        'BackBtn
+        '
+        Me.BackBtn.AutoSize = True
+        Me.BackBtn.Font = New System.Drawing.Font("Press Start 2P", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackBtn.Location = New System.Drawing.Point(19, 382)
+        Me.BackBtn.Name = "BackBtn"
+        Me.BackBtn.Size = New System.Drawing.Size(78, 23)
+        Me.BackBtn.TabIndex = 8
+        Me.BackBtn.Text = "Back"
+        '
         'ScoreSeven
         '
         Me.ScoreSeven.AutoSize = True
         Me.ScoreSeven.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreSeven.Location = New System.Drawing.Point(40, 343)
+        Me.ScoreSeven.Location = New System.Drawing.Point(30, 343)
         Me.ScoreSeven.Name = "ScoreSeven"
-        Me.ScoreSeven.Size = New System.Drawing.Size(86, 18)
+        Me.ScoreSeven.Size = New System.Drawing.Size(21, 18)
         Me.ScoreSeven.TabIndex = 7
-        Me.ScoreSeven.Text = "Label6"
+        Me.ScoreSeven.Text = " "
         '
         'ScoreSix
         '
         Me.ScoreSix.AutoSize = True
         Me.ScoreSix.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreSix.Location = New System.Drawing.Point(40, 302)
+        Me.ScoreSix.Location = New System.Drawing.Point(30, 302)
         Me.ScoreSix.Name = "ScoreSix"
-        Me.ScoreSix.Size = New System.Drawing.Size(86, 18)
+        Me.ScoreSix.Size = New System.Drawing.Size(203, 18)
         Me.ScoreSix.TabIndex = 6
-        Me.ScoreSix.Text = "Label5"
+        Me.ScoreSix.Text = "RIK      432109"
         '
         'ScoreFive
         '
         Me.ScoreFive.AutoSize = True
         Me.ScoreFive.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreFive.Location = New System.Drawing.Point(40, 258)
+        Me.ScoreFive.Location = New System.Drawing.Point(30, 258)
         Me.ScoreFive.Name = "ScoreFive"
-        Me.ScoreFive.Size = New System.Drawing.Size(86, 18)
+        Me.ScoreFive.Size = New System.Drawing.Size(203, 18)
         Me.ScoreFive.TabIndex = 5
-        Me.ScoreFive.Text = "Label4"
+        Me.ScoreFive.Text = "DYL      543210"
         '
         'ScoreFour
         '
         Me.ScoreFour.AutoSize = True
         Me.ScoreFour.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreFour.Location = New System.Drawing.Point(40, 216)
+        Me.ScoreFour.Location = New System.Drawing.Point(30, 216)
         Me.ScoreFour.Name = "ScoreFour"
-        Me.ScoreFour.Size = New System.Drawing.Size(86, 18)
+        Me.ScoreFour.Size = New System.Drawing.Size(203, 18)
         Me.ScoreFour.TabIndex = 4
-        Me.ScoreFour.Text = "Label3"
+        Me.ScoreFour.Text = "RAN      654321"
         '
         'ScoreThree
         '
         Me.ScoreThree.AutoSize = True
         Me.ScoreThree.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreThree.Location = New System.Drawing.Point(40, 175)
+        Me.ScoreThree.Location = New System.Drawing.Point(30, 175)
         Me.ScoreThree.Name = "ScoreThree"
-        Me.ScoreThree.Size = New System.Drawing.Size(86, 18)
+        Me.ScoreThree.Size = New System.Drawing.Size(203, 18)
         Me.ScoreThree.TabIndex = 3
-        Me.ScoreThree.Text = "Label2"
+        Me.ScoreThree.Text = "JOE      765432"
         '
         'ScoreTwo
         '
         Me.ScoreTwo.AutoSize = True
         Me.ScoreTwo.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreTwo.Location = New System.Drawing.Point(40, 135)
+        Me.ScoreTwo.Location = New System.Drawing.Point(30, 135)
         Me.ScoreTwo.Name = "ScoreTwo"
         Me.ScoreTwo.Size = New System.Drawing.Size(203, 18)
         Me.ScoreTwo.TabIndex = 2
-        Me.ScoreTwo.Text = "BOB      000004"
+        Me.ScoreTwo.Text = "BOB      876543"
         '
         'ScoreOne
         '
         Me.ScoreOne.AutoSize = True
         Me.ScoreOne.Font = New System.Drawing.Font("Press Start 2P", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreOne.Location = New System.Drawing.Point(40, 94)
+        Me.ScoreOne.Location = New System.Drawing.Point(30, 94)
         Me.ScoreOne.Name = "ScoreOne"
         Me.ScoreOne.Size = New System.Drawing.Size(203, 18)
         Me.ScoreOne.TabIndex = 1
-        Me.ScoreOne.Text = "GUY      456789" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.ScoreOne.Text = "GUY      987654" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'HighScoresLbl
         '
@@ -132,16 +143,6 @@ Partial Class HighScores
         Me.HighScoresLbl.TabIndex = 0
         Me.HighScoresLbl.Text = "High Scores"
         '
-        'BackBtn
-        '
-        Me.BackBtn.AutoSize = True
-        Me.BackBtn.Font = New System.Drawing.Font("Press Start 2P", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BackBtn.Location = New System.Drawing.Point(19, 382)
-        Me.BackBtn.Name = "BackBtn"
-        Me.BackBtn.Size = New System.Drawing.Size(78, 23)
-        Me.BackBtn.TabIndex = 8
-        Me.BackBtn.Text = "Back"
-        '
         'HighScores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -150,6 +151,7 @@ Partial Class HighScores
         Me.ClientSize = New System.Drawing.Size(288, 447)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "HighScores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HighScores"

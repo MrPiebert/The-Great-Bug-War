@@ -104,6 +104,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property Capture() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Capture", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property cropped_1920_1200_900628() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("cropped-1920-1200-900628", resourceCulture)
@@ -354,6 +364,16 @@ Namespace My.Resources
         Public ReadOnly Property Terraria___Overworld_Day_8_Bit_Theme() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Terraria___Overworld_Day_8_Bit_Theme", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property Wing_Sprit3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Wing Sprit3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
     End Module

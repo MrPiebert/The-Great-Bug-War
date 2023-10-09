@@ -7,7 +7,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BackgroundImageLayout = ImageLayout.Stretch                      'sets background image size
-        player.URL = "Terraria - Overworld Day 8-Bit Theme.wav"
+        player.URL = "Touhou Luna Nights BGM - Stage 1 - Lunar Clock ~ Lunar Dial.mp3"
         player.settings.setMode("loop", True)
         player.controls.play()
         beep.URL = "Beeper.mp3"

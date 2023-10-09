@@ -6,9 +6,9 @@ Imports System.IO
 
 Public Class Customise_Player
 
-    Dim ShipC As StreamWriter = New StreamWriter("ShipChoice.txt")
-    Dim ShotC As StreamWriter = New StreamWriter("ShotChoice.txt")
-    Dim SkillC As StreamWriter = New StreamWriter("SkillChoice.txt")
+    Public shipTypeFilePath As String = "shipType.txt"
+    Public shotTypeFilePath As String = "shotType.txt"
+    Public skillTypeFilePath As String = "skillType.txt"
 
 
     Public shipType As String
@@ -77,13 +77,12 @@ Public Class Customise_Player
     Private Sub BackBtn_Click(sender As Object, e As EventArgs) Handles BackBtn.Click
         Me.Close()
         Form1.Show()
-        ShipC.Close()
-        ShotC.Close()
-        SkillC.Close()
     End Sub
 
     Private Sub Customise_Player_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ClearFile(shipTypeFilePath)
+        ClearFile(shotTypeFilePath)
+        ClearFile(skillTypeFilePath)
         Me.BackgroundImageLayout = ImageLayout.Stretch
 
         redShipBitmap = New Bitmap(RedShip.Image)
@@ -652,16 +651,43 @@ Public Class Customise_Player
         Invalidate() ' Trigger a repaint
     End Sub
 
+    Private Sub WriteToFile(filePath As String, content As String)
+        ' Write the content to the specified file
+        Using writer As StreamWriter = New StreamWriter(filePath, False)
+            writer.WriteLine(content)
+        End Using
+    End Sub
+
+    Private Sub ClearFile(filePath As String)
+        ' Clear the content of the specified file
+        Using writer As StreamWriter = New StreamWriter(filePath, False)
+            writer.Write(String.Empty)
+        End Using
+    End Sub
+
     Private Sub BeginBtn_Click(sender As Object, e As EventArgs) Handles BeginBtn.Click
         If shipSelected AndAlso shotSelected AndAlso skillSelected Then
-            ShipC.WriteLine(shipType)
-            ShipC.Close()
-            SkillC.WriteLine(skillType)
-            SkillC.Close()
-            ShotC.WriteLine(shotType)
-            ShotC.Close()
-            Me.Hide()
-            Level1.Show()
+            WriteToFile(shipTypeFilePath, shipType)
+            WriteToFile(shotTypeFilePath, shotType)
+            WriteToFile(skillTypeFilePath, skillType)
+            Me.Close()
+            Form1.Close()
+            Try
+                ' Specify the path to the .exe file you want to run
+                Dim exePath As String = "C:\Users\mrpie\source\repos\MonoGameVBExample\MonoGameVBExample\bin\Debug\net6.0\MonoGameVBExample.exe"
+
+                ' Check if the .exe file exists
+                If File.Exists(exePath) Then
+                    ' Run the .exe file
+                    Dim processInfo As New ProcessStartInfo()
+                    processInfo.FileName = exePath
+                    Process.Start(processInfo)
+                Else
+                    MessageBox.Show("The specified .exe file does not exist.")
+                End If
+            Catch ex As Exception
+                MessageBox.Show("An error occurred while attempting to run the .exe file: " & ex.Message)
+            End Try
         End If
     End Sub
 End Class

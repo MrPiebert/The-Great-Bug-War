@@ -127,6 +127,9 @@
   <data name="Spray_Can-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spray_Can-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Capture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capture.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="projectile03-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\projectile03-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,6 +190,9 @@
   <data name="ShipChoice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShipChoice.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="1e64c3289a248160c26a3b57b221e282" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1e64c3289a248160c26a3b57b221e282.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="New Piskel-1.png (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New Piskel-1.png (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,7 +211,7 @@
   <data name="ShotChoice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShotChoice.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="1e64c3289a248160c26a3b57b221e282" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1e64c3289a248160c26a3b57b221e282.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wing Sprit3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wing Sprit3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
